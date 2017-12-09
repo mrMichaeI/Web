@@ -3,54 +3,193 @@
 
 <head>
     <link rel="stylesheet" href="~/css/articles.css"/>
+    <meta charset="utf-8">
 </head>
 
 @{
     ViewData["Title"] = "Статьи";
 }
 
-<div>
-    <h1>Тэг-хелперы</h1>
-    <div>
-        <p></p><h3>Что такое Tag Helpers?</h3>
+<body>
+    <div style="line-height:2; padding-top:25px">
         <p>
-            Tag Helpers заставляют код со стороны сервера участвовать в создании и представлении HTML элементов в Razor файлах. 
-            Например, встроенный ImageTagHelper может присоединить номер версии к имени изображения. Когда изображение меняется, 
-            сервер генерирует новую уникальную версию изображения, так что клиент гарантированно получит текущую версию изображения 
-            (вместо кэшированного изображения). Для общих целей существует много встроенных Tag Helpers - например, для создания 
-            форм, ссылок, загрузки и тд - и многие из них доступны в открытых GitHub репозиториях и в качестве NuGet пакетов. 
-            Tag Helpers работают с HTML элементами, основываясь на имени элемента, имени атрибута или родительском тэге. Например, 
-            встроенный LabelTagHelper может работать с HTML элементом "label", если применяются атрибуты LabelTagHelper.
-        </p><p></p>
-        <h3>Чем полезны Tag Helpers?</h3>
-        <p>
-            <b>Большая схожесть с HTML</b>
-            <p>
-                По большей части разметка Razor, где используются Tag Helpers, выглядит, как стандартный HTML. Фронтэнд разработчики, 
-                работающие с HTML/CSS/JavaScript, могут редактировать Razor без необходимости изучать синтаксис C# Razor.
-            </p>
-            <b>Поддержка IntelliSense при создании HTML и Razor разметки</b>
-            <p>
-                В этом Tag Helpers сильно отличаются от вспомогательных методов HTML. В разделе Tag Helpers по сравнению со 
-                вспомогательными методами HTML более подробно объясняется эта разница. Кроме того, вам стоит уделить особое внимание 
-                разделу Поддержка IntelliSense для Tag Helpers. Даже разработчики, сведущие в синтаксисе Razor C#, работают более 
-                продуктивно, используя Tag Helpers, нежели создавая C# Razor разметку.
-            </p>
-            <b>Вы сможете работать более продуктивно и создавать более надежный, устойчивый и безопасный код, используя информацию, 
-                которая доступна только на сервере</b>
-            <p>
-                Например, когда ранее мы хотели изменить изображение, нам нужно было изменить название изображения. Изображения нужно 
-                было обязательно кэшировать по причинам эффективности, и пока мы не меняли имя изображения, клиенты могли получать его 
-                копию. Исторически после редактирования изображения нужно было обязательно менять его имя и каждую ссылку на него в веб 
-                приложении. Мало того, что это трудоемкий процесс, так еще у вас могут возникнуть и ошибки (вы можете пропустить ссылку, 
-                случайно ввести неправильную строку и тд.) Встроенный ImageTagHelper может сделать это автоматически. ImageTagHelper 
-                присоединяет номер версии к имени изображения, так что когда изображение меняется, сервер автоматически генерирует новую 
-                уникальную версию изображения. Клиенты гарантированно получают текущее изображение. Все это достигается с помощью 
-                ImageTagHelper.
-        </p><p></p>
-</div>
-</div>
+            <img height="15%" width="15%" src="~/images/html_1.svg" alt="html picture">
+        </p>
+        <h1>Тэг-хелперы</h1>
+        <div>
+            <div>
+                <h3 style="padding-top:25px">Что такое Tag Helpers?</h3>
+                <p>
+                    Tag Helpers заставляют код со стороны сервера участвовать в создании и представлении HTML элементов в Razor файлах.
+                    Например, встроенный ImageTagHelper может присоединить номер версии к имени изображения. Когда изображение меняется,
+                    сервер генерирует новую уникальную версию изображения, так что клиент гарантированно получит текущую версию изображения
+                    (вместо кэшированного изображения). Для общих целей существует много встроенных Tag Helpers - например, для создания
+                    форм, ссылок, загрузки и тд - и многие из них доступны в открытых GitHub репозиториях и в качестве NuGet пакетов.
+                    Tag Helpers работают с HTML элементами, основываясь на имени элемента, имени атрибута или родительском тэге. Например,
+                    встроенный LabelTagHelper может работать с HTML элементом
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">
+                        label
+                    </span>
+                    , если применяются атрибуты
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">
+                        LabelTagHelper
+                    </span>.
+                </p>
+            </div>
+            <div>
+                <h3 style="padding-top:25px">Чем полезны Tag Helpers?</h3>
+                <p style="padding-top:5px">
+                    <b>Большая схожесть с HTML</b>
+                <p>
+                    По большей части разметка Razor, где используются Tag Helpers, выглядит, как стандартный HTML. Фронтэнд разработчики,
+                    работающие с HTML/CSS/JavaScript, могут редактировать Razor без необходимости изучать синтаксис C# Razor.
+                </p>
+                <b>Поддержка IntelliSense при создании HTML и Razor разметки</b>
+                <p>
+                    В этом Tag Helpers сильно отличаются от вспомогательных методов HTML. В разделе Tag Helpers по сравнению со
+                    вспомогательными методами HTML более подробно объясняется эта разница. Кроме того, вам стоит уделить особое внимание
+                    разделу Поддержка IntelliSense для Tag Helpers. Даже разработчики, сведущие в синтаксисе Razor C#, работают более
+                    продуктивно, используя Tag Helpers, нежели создавая C# Razor разметку.
+                </p>
+                <b>
+                    Вы сможете работать более продуктивно и создавать более надежный, устойчивый и безопасный код, используя информацию,
+                    которая доступна только на сервере
+                </b>
+                <p>
+                    Например, когда ранее мы хотели изменить изображение, нам нужно было изменить название изображения. Изображения нужно
+                    было обязательно кэшировать по причинам эффективности, и пока мы не меняли имя изображения, клиенты могли получать его
+                    копию. Исторически после редактирования изображения нужно было обязательно менять его имя и каждую ссылку на него в веб
+                    приложении. Мало того, что это трудоемкий процесс, так еще у вас могут возникнуть и ошибки (вы можете пропустить ссылку,
+                    случайно ввести неправильную строку и тд.) Встроенный
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">ImageTagHelper</span>
+                    может сделать это автоматически.
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">ImageTagHelper</span>
+                    присоединяет номер версии к имени изображения, так что когда изображение меняется, сервер автоматически генерирует новую
+                    уникальную версию изображения. Клиенты гарантированно получают текущее изображение. Все это достигается с помощью
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">ImageTagHelper</span>.
+                </p>
+                <p>
+                    Большинство встроенных Tag Helpers нацелены на существующие HTML элементы и предоставляют для элемента атрибуты на стороне клиента.
+                    Например, элемент
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">input</span>
+                    , использующийся во многих представлениях в папке Views/Account, содержит атрибут
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">asp-for</span>
+                    , который извлекает
+                    имя имя указанного свойства модели в представленный HTML. Следующая разметка Razor:
+                    <pre style="text-align:left;border-width:thin;border-style:solid;border-color:lightgray;padding:10px;">
+                    &ltlabel asp-for="Email"&gt&lt/label&gt
+                </pre>
+                    генерирует следующий HTML:
+                    <pre style="text-align:left;border-width:thin;border-style:solid;border-color:lightgray;padding:10px;">
+                    &ltlabel for="Email"&gtEmail&lt/label&gt
+                </pre>
+                    Атрибут
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">asp-for</span>
+                    доступен для свойства
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">For</span>
+                    в
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">LabelTagHelper</span>.
+                <p> </p>
+            </div>
+            <div>
+                <h3 style="padding-top:25px">Управление Tag Helpers</h3>
+                <p>
+                    Tag Helpers контролируются комбинацией
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 addTagHelper</span>
+                    ,
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 removeTagHelper</span>
+                    и знаком ”!” opt-out.
+                </p>
 
-<div>
-    <li><a href="http://dotnet.today/ru/aspnet5-vnext/mvc/views/tag-helpers/intro.html">Введение в Тэг-хелперы</a></li>
-</div>
+                <h4 style="padding-top:10px">
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:smaller;font-weight:bolder">&#64 addTagHelper</span>
+                    делает Tag Helpers доступными
+                </h4>
+
+                <p style="padding-top:0px">
+                    Если вы создаете новое ASP.NET Core приложение с именем AuthoringTagHelpers (без аутентификации), в ваш проект будет добавлен
+                    следующий файл Views/_ViewImports.cshtml:
+                </p>
+                <pre style="text-align:left;border-width:thin;border-style:solid;border-color:lightgray;padding:10px;">
+                    &#64 using AuthoringTagHelpers
+                    &#64 addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+                </pre>
+                <p>
+                    Директива <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 addTagHelper</span>
+                    делает Tag Helpers доступными для представления. В данном случае файлом представления является Views/_ViewImports.cshtml, который по умолчанию
+                    наследуется всеми файлами представлений в папке Views и подпапками; таким образом, Tag Helpers становятся доступными для всех. В коде сверху
+                    используется синтаксис “*” для указания того, что все Tag Helpers в указанной сборке (Microsoft.AspNet.Mvc.TagHelpers) будут доступны для
+                    каждого файла представления в директории Views или поддиректории. Первый параметр после
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 addTagHelper</span>
+                    говорит, что Tag Helpers надо загрузить (мы используем “*” для всех Tag Helpers), а второй параметр “Microsoft.AspNet.Mvc.TagHelpers”
+                    указывает сборку, содержащую Tag Helpers. Microsoft.AspNet.Mvc.TagHelpers - это сборка для встроенных Tag Helpers.
+                </p>
+                <p style="padding-top:10px">
+                    Чтобы использовать все Tag Helpers в данном проекте (где создается сборка AuthoringTagHelpers), мы сделаем следующее:
+                    <pre style="text-align:left;border-width:thin;border-style:solid;border-color:lightgray;padding:10px">
+                    &#64 using AuthoringTagHelpers
+                    &#64 addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+                    &#64 addTagHelper "*, AuthoringTagHelpers"
+                </pre>
+                </p>
+                <p style="padding-top:10px">
+                    Если в вашем проекте содержится
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">EmailTagHelper</span>
+                    с пространством имен по умолчанию
+                    <br />(<span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">
+                        AuthoringTagHelpers.TagHelpers.EmailTagHelper
+                    </span>
+                    ), вы можете использовать полное имя (FQN) элемента Tag Helper:
+                    <pre style="border-width:thin;border-style:solid;border-color:lightgray;padding:10px">
+                    &#64 using AuthoringTagHelpers
+                    &#64 addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+                    &#64 addTagHelper "AuthoringTagHelpers.TagHelpers3.EmailTagHelper, AuthoringTagHelpers"
+                </pre>
+                </p>
+                <p style="padding-top:10px">
+                    Чтобы добавить Tag Helper в представление с помощью FQN, вы сперва добавляете FQN
+                    <br />(<span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">
+                        AuthoringTagHelpers.TagHelpers.EmailTagHelper
+                    </span>
+                    ), а затем имя сборки (AuthoringTagHelpers). Большинство разработчиков предпочитают использовать синтаксис wildcard - “*”.
+                    Синтаксис wildcard позволяет вставлять символы wildcard “*” в качестве суффикса в FQN. Например, некоторые из следующих директив добавят
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">EmailTagHelper</span>:
+                    <pre style="border-width:thin;border-style:solid;border-color:lightgray;padding:10px">
+                    &#64 addTagHelper "AuthoringTagHelpers.TagHelpers.E*, AuthoringTagHelpers"
+                    &#64 addTagHelper "AuthoringTagHelpers.TagHelpers.Email*, AuthoringTagHelpers"
+                </pre>
+                </p>
+                <p style="padding-top:10px">
+                    Как упоминалось ранее, добавление директивы
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 addTagHelper</span>
+                    в файл Views/_ViewImports.cshtml делает элемент Tag Helper доступным для всех файлов представлений в директории Views и поддиректориях.
+                    Вы можете использовать директиву
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 addTagHelper</span>
+                    в конкретных файлах представлений, если вы хотите, чтобы элемент Tag Helper находился только в этих представлениях.
+                </p>
+
+                <h4 style="padding-top:10px">
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:smaller;font-weight:bolder">&#64 removeTagHelper</span>
+                    удаляет Tag Helpers
+                </h4>
+
+                <p style="padding-top:0px">
+                    У
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:smaller;font-weight:bolder">&#64 removeTagHelper</span>
+                    есть те же два параметра, что и у
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:small">&#64 addTagHelper</span>
+                    , и эта директива удаляет ранее добавленный элемент Tag Helper. Например, если применить
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:smaller;font-weight:bolder">&#64 removeTagHelper</span>
+                    к конкретному представлению, то она удалит из этого представления конкретный Tag Helper. Использование
+                    <span style="border-width:thin;border-style:solid;border-color:lightgray;padding:2px;color:#e33864;font-size:smaller;font-weight:bolder">&#64 removeTagHelper</span>
+                    в файле Views/Folder/_ViewImports.cshtml удаляет определенный элемент Tag Helper со всех представлений в папке.
+                </p><br /><br />
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <li><a href="http://dotnet.today/ru/aspnet5-vnext/mvc/views/tag-helpers/intro.html">Введение в Тэг-хелперы</a></li><br />
+    </div>
+</body>
