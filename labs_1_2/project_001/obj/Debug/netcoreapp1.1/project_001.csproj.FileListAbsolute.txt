@@ -1,0 +1,9 @@
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\bin\Debug\netcoreapp1.1\labs_1_2.deps.json
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\bin\Debug\netcoreapp1.1\labs_1_2.runtimeconfig.json
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\bin\Debug\netcoreapp1.1\labs_1_2.runtimeconfig.dev.json
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\bin\Debug\netcoreapp1.1\labs_1_2.dll
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\bin\Debug\netcoreapp1.1\labs_1_2.pdb
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\obj\Debug\netcoreapp1.1\project_001.csproj.CoreCompileInputs.cache
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\obj\Debug\netcoreapp1.1\project_001.AssemblyInfo.cs
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\obj\Debug\netcoreapp1.1\labs_1_2.dll
+D:\High_School\4_curs\1_development_of_Internet_technologies\001\project_001\project_001\obj\Debug\netcoreapp1.1\labs_1_2.pdb

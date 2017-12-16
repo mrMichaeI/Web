@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/css/Mail.css" />
+    <meta charset="utf-8">
+</head>
+
+@model project_001.Models.ContactModel
+
+@{
+    ViewBag.Title = "Напишите нам";
+}
+    
+<body>
+    <div style="line-height:2; padding-top:20px">
+        <p>
+            <img height="12%" width="12%" src="~/images/mail1.png" alt="html picture" style="padding-left:17px; padding-bottom:10px">
+        </p>
+
+        <div class="container">
+            <h1 style="padding-bottom:15px">Напишите нам</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <form action="/Contact/Send" method="POST">
+                        <div class="form">
+                            <div class="form-group" style="padding-bottom:10px">
+                                <input asp-for="Address" id="AddressInput" type="email" class="form-control" placeholder="Email">
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group" style="padding-bottom:10px">
+                                <input asp-for="Topic" id="TopicInput" type="text" class="form-control" placeholder="Тема сообщения">
+                                <span asp-validation-for="Topic" class="text-danger"></span>
+                            </div>
+                            <div class="form-group" style="padding-bottom:10px">
+                                <textarea asp-for="Text" id="TextInput" class="form-control" rows="9" placeholder="Текст сообщения"></textarea>
+                                <span asp-validation-for="Text" class="text-danger"></span>
+                            </div>
+                            <button type="submit" style="text-align:left; background-color:black; border-bottom-color:black; color:#ffffff; border-width:0px; border-radius:20px">Отправить</button>
+                            <br style="padding-top:80px" />
+                        </div>
+                    </form>
+
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <div class="alert-info">
+                            <p>@Html.Raw(ViewBag.ErrorMessage)</p>
+                        </div>
+                    }
+                    @if (ViewBag.Success != null && ViewBag.Success)
+                    {
+                        <div class="alert-success">
+                            <p class="text-success">Сообщение отправлено</p>
+                        </div>
+                    }
+                    <span class="clearfix"></span>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        
+    </div>
+</body>
+
+</html>

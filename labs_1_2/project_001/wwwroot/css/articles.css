@@ -1,0 +1,13 @@
+﻿.navbar {
+    background-color:white;
+    font-weight: normal;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 20%;
+}
