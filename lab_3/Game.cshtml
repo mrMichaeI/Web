@@ -1,0 +1,35 @@
+﻿<head>
+    <meta charset="utf-8">
+</head>
+
+@{
+    ViewBag.Title = "Игра 'Жизнь'";
+}
+
+<body>
+
+    <h1 style="padding-top:30px; padding-bottom:30px">игра "Жизнь"</h1>
+
+    <canvas id="Canvas1" width="400" height="400" style="border:2px; border:solid; border-color:lightgrey"></canvas>
+
+
+    <div>
+        <style>
+            button 
+            {
+                border-color: lightgrey;
+                background-color: white;
+                padding: 10px;
+            }
+        </style>
+    </div>
+
+    <button id="NewGame"><b>New game</b></button>
+    <button id="pause"><b>pause</b></button>
+    <button id="resume"><b>resume</b></button>
+
+    <environment include="Development">
+        <script src="~/js/Game.js"></script>
+    </environment>
+        
+</body>
